@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #292f3b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background: #292f3b;
+}
+
+.card {
+  width: 100%;
+  max-width: 680px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.icone {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.cabecalho p {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 16px;
+}
+
+.acoes {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.botao {
+  flex: 1;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.principal {
+  background: #2563eb;
+  color: white;
+}
+
+.principal:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.secundario {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.secundario:hover {
+  background: #d1d5db;
+}
+
+.erro {
+  margin: 4px 0 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    padding: 14px;
+    align-items: flex-start;
+  }
+
+  .card {
+    margin-top: 14px;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .linha {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .acoes {
+    flex-direction: column-reverse;
+  }
+}
