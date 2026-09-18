@@ -10,7 +10,7 @@ function App() {
   const [telefone, setTelefone] = useState('');
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState('');
-const API_URL = 'https://master-cartuchos-pdf.onrender.com/'
+const API_URL = 'https://master-cartuchos-pdf.onrender.com'
   async function gerarPDF(event) {
     event.preventDefault();
     setErro('');
